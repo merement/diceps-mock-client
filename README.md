@@ -32,7 +32,7 @@ The research environment relies on a dual-system topology:
 +-----------------------+                    +---------------------------------------+
 
 
-* Host Subsystem: A separate Rust/Cargo utility handling orchestration, interactive CLI workflows, and telemetry logging (link to repository once published).
+* Host Subsystem: A separate Rust/Cargo utility handling orchestration, interactive CLI workflows, and telemetry logging [diceps-host](https://github.com/merement/diceps-host).
 
 * Target Subsystem (This Repository): Bare-metal firmware parsing commands and executing structural emulation over a physical USB-UART serial link.
 
