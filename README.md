@@ -23,13 +23,12 @@ The communication module implemented here serves as the reference design for the
 
 The research environment relies on a dual-system topology:
 
-+-----------------------+                    +---------------------------------------+
-
-|                       |   USB Serial Port  |          ESP32-C6-WROOM-1             |
-|   Host PC Application |<==================>| (Research Architecture Emulator)      |
-| (Separate Repository) |   (Wired Link)     |  - Command Parser  - Status Reporting |
-|                       |                    |  - Normal/Interactive State Machine   |
-+-----------------------+                    +---------------------------------------+
+    +-----------------------+                    +---------------------------------------+
+    |                       |   USB Serial Port  |          ESP32-C6-WROOM-1             |
+    |   Host PC Application |<==================>| (Research Architecture Emulator)      |
+    | (Separate Repository) |   (Wired Link)     |  - Command Parser  - Status Reporting |
+    |                       |                    |  - Normal/Interactive State Machine   |
+    +-----------------------+                    +---------------------------------------+
 
 
 * Host Subsystem: A separate Rust/Cargo utility handling orchestration, interactive CLI workflows, and telemetry logging [diceps-host](https://github.com/merement/diceps-host).
