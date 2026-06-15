@@ -78,18 +78,21 @@ Note: Our configured runner in .cargo/config.toml automatically invokes espflash
 
 ------------------------------
 
-## 📑 Protocol & Interface Specifications## Serial Link Parameters
-
-* Baud Rate: 115200 (Default)
-* Data Bits: 8
-* Parity: None
-* Stop Bits: 1
+## 📑 Protocol & Interface Specifications
 
 ## Core Command Set (Examples)
 
 | Command Opcode | Description | Response Payload |
 |---|---|---|
 | AUTH | TODO | TODO |
+
+## Serial Link Parameters
+
+* Baud Rate: 115200 (Default)
+* Data Bits: 8
+* Parity: None
+* Stop Bits: 1
+
 
 ------------------------------
 
