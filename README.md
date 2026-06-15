@@ -1,3 +1,5 @@
+# diceps-mock-client
+
 ## Research Dice-MCU Architecture Emulator
 
 A Rust-based firmware emulator designed to research, develop, and evaluate communication protocols for an MCU-based research Dice architecture.
