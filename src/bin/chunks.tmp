@@ -1,0 +1,39 @@
+// Testing/mocking structures
+struct UsbMock;
+impl UsbMock {
+    pub fn read_byte(&mut self) -> Result<u8, nb::Error<Infallible>> {
+        Ok(0)
+    }
+    pub fn read(&mut self, buf: &mut [u8]) -> Result<usize, nb::Error<Infallible>> {
+        buf[0] = 11;
+        Ok(1)
+    }
+    pub fn write(&mut self, msg: &[u8]) -> Result<(), nb::Error<Infallible>> {
+        Ok(())
+    }
+}
+struct UsbDevice {
+    rx: UsbMock,
+    tx: UsbMock,
+    buffer: [u8; BUFFER_SIZE],
+}
+trait Communicable {
+     fn write(&mut self, msg: &[u8]);
+     fn read(&mut self, buff: &mut [u8]) -> usize;
+     fn read_byte(&mut self) -> Result<u8, nb::Error<Infallible>>;
+     fn announce(&mut self) -> usize;
+}
+// Then, in main() {...}
+//let (rx_mock, tx_mock) = (UsbMock {}, UsbMock {});
+
+// MAYBE: Evaluate interfacing through traits
+//impl NewTrait for UsbDevice { ... }
+
+// Debugging outputs
+comm_device.write(b" (RPT-1: ");
+comm_device.write(&([comm_device.buf_pos as u8 + 48_u8, 13]));
+comm_device.write(b" ");
+comm_device.write_buffer();
+comm_device.write(b" :RPT-1) ");
+
+
